@@ -1,0 +1,158 @@
+@font-face {
+    font-family: Arial;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+:root {
+    --color-highlight: #ff6a00;
+    --color-background: #181818;
+    --color-text: #e0e0e0;
+  }
+
+html {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(images/backlogo.png);
+    background-repeat: repeat;
+    background-size: auto;
+    background-color: #000000;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    min-height: 100vh;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 120px
+}
+
+img {
+    border-radius: 10px;
+}
+
+p, li, h1, h3, h4, h2 {
+    color: var(--color-text);
+    line-height: 25px;
+}
+
+.ultra_padding {
+    padding-left: 280px;
+}
+
+.nickname {
+    color: #ff0000;
+}
+
+a {
+  color: #7289da;
+}
+
+.centered-paragraph {
+    text-align: center;
+}
+
+
+nav {
+  position: fixed;
+  background-color: #000000;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  z-index: 1000;
+  font-size: xx-large;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav .logo {
+  font-size: 46px;
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #da7272;
+}
+
+footer {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.svg {
+    height: 400px;
+    background: #111111
+}
+
+.left_float {
+    float: left;
+}
+
+.content-block {
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 660px;
+}
+
+.content-block h2,
+.content-block h3,
+.content-block h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.content-block p {
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.content-block ul,
+.content-block ol {
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+
+.content-block li {
+    margin-bottom: 8px;
+    line-height: 20px;
+}
