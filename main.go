@@ -15,12 +15,19 @@ func errh(err error) {
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	filename := "./site" + r.URL.Path
-	fmt.Printf("Sent: %s\n", r.URL.Path)
+	
 	
 	if _, err := os.Stat(filename); os.IsNotExist(err) {
-		http.ServeFile(w, r, "./site/404.html")
+		if _, err := os.Stat(filename + ".html"); os.IsNotExist(err) {
+			http.ServeFile(w, r, "./site/404.html")
+			fmt.Printf("404: %s\n", r.URL.Path)
+		} else {
+			http.ServeFile(w, r, filename + ".html")
+			fmt.Printf("Sent: %s + .html\n", r.URL.Path)
+		}
 	} else {
 		http.ServeFile(w, r, filename)
+		fmt.Printf("Sent: %s\n", r.URL.Path)
 	}
 }
 
